@@ -30,9 +30,13 @@ EduTrack is a hybrid cloud-based academic planner designed to enhance time manag
 
 ### Testing
 
-Refer to the Test Report for detailed testing procedures and results.
+Refer to the [Test Report](https://github.com/bilalalissa/EduTrack-v2/blob/main/docs/EduTrack-v2-Test-Report.pdf) for detailed testing procedures and results.
+
+### Requirments Document
+
+Refer to the [Requirments Document](https://github.com/bilalalissa/EduTrack-v2/blob/main/docs/Requirements-Document-Dec-6-2024.pdf) for detailed requirements.
 
 ### License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://mit-license.org/) file for details.
 

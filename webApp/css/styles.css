@@ -1,0 +1,646 @@
+/* General Reset */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+} */
+
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    /* Main background color */
+    background-color: #262626;
+    /* confirmed */
+    /* background-color: rgb(58, 46, 46);  */
+
+    /* try to find a color */
+    /* background-color: rgb(255, 0, 0); */
+
+    color: white;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 20px;
+    border: 1px solid #ab261fa4;
+    /* border: 1px solid #be1006; */
+    /* border-bottom: none; */
+    border-bottom: 3px groove #ab261fa4;
+    padding: 5px;
+    margin-bottom: 0;
+    /* Reduce or remove the bottom margin */
+    height: 15%;
+    /* Height set as 15% of the viewport height */
+}
+
+/* Footer styles */
+footer {
+    color: white;
+    background-color: #262626;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #ab261fa4;
+    /* border-top: none; */
+    border-top: 3px groove #ab261fa4;
+    padding: 5px;
+    margin-top: 0;
+    /* Reduce or remove the bottom margin */
+    height: 10%;
+    /* Height set as 10% of the viewport height */
+}
+
+/* Main container styles */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    /* Elements laid out in a row */
+    align-items: stretch;
+    /* Stretch children to fill the height */
+    margin: 20px;
+    overflow: hidden;
+    /* Prevent overall container from scrolling */
+    /* height: 150vh; */
+}
+
+.note {
+    text-align: right;
+    font-size: xx-small;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Left section styles */
+.left-section {
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 3px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 200px;
+    /* Keeps left section fixed width */
+    margin-right: 10px;
+    /* Spacing between left and right sections */
+    transition: display 0.3s ease;
+    /* Smooth hide/show effect */
+}
+
+.clsTitle {
+    color: #bfbfbf;
+    font-weight: bold;
+}
+
+.subsubseg {
+    margin-left: 50px;
+}
+
+.duration-regular {
+    color: aquamarine;
+    border-bottom: 2px solid aquamarine;
+    padding-right: 45px;
+    width: 250px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.duration-critical {
+    color: #ffff01;
+    border-bottom: 2px solid #ffff01;
+    padding-right: 20px;
+    width: 250px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.duration-attention {
+    color: #ff2a00;
+    border-bottom: 2px solid #ff2a00;
+    padding-right: 2px;
+    width: 250px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.duration-overdue {
+    color: #1500ff;
+    border-bottom: 2px solid #1500ff;
+    padding-right: 50px;
+    width: 250px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.line {
+    height: 2px;
+    /* Thickness of the line */
+    background-color: #bfbfbf;
+    /* Color of the line */
+    margin: 10px auto;
+    /* Spacing above and below the line */
+    width: 50%;
+    /* Width of the line */
+}
+
+/* Style for the login form and its elements */
+#loginForm {
+    color: white;
+    background-color: #262626;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-top: 5px groove #be1006; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* This adds space between form elements */
+}
+
+/* Style for form input elements */
+#loginForm .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Style for input fields */
+#loginForm input {
+    padding: 8px;
+    background-color: #262626;
+    border: 1px solid #da2d24ce;
+    border-radius: 5px;
+    color: white;
+    width: auto;
+    height: auto;
+}
+
+/* Additional styles for input fields on focus */
+#loginForm input:focus {
+    outline: none;
+    border-color: #f28043;
+}
+
+/* Assuming the parent container of #signupForm has a class named .form-container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center the form */
+    align-items: flex-start;
+    /* Align to the top */
+    /* min-height: 100vh; Makes sure the container takes at least the whole viewport height */
+    padding-top: 20px;
+    /* Add some space at the top */
+}
+
+/* Style for the signup form and its elements */
+#signupForm {
+    color: white;
+    background-color: #262626;
+    border-radius: 5px;
+    margin: 5px auto;
+    /* Auto margin for horizontal centering if needed */
+    border: 1px solid #ab261fa4;
+    /* border-top: 5px groove #be1006; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    max-width: 450px;
+    /* Adjust maximum width as needed */
+}
+
+/* Style for form input elements */
+#signupForm .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 96%;
+    /* Make input groups fill the form */
+    height: auto;
+}
+
+.input-group-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    /* background-color: #1500ff; */
+    height: auto;
+}
+
+/* Style for input fields */
+#signupForm input {
+    padding: 8px;
+    background-color: #262626;
+    border: 1px solid #e7342bdb;
+    border-radius: 5px;
+    color: white;
+    /* background-color: #ff006a; */
+    width: 100%;
+    /* Make input groups fill the form */
+    height: auto;
+}
+
+/* Additional styles for input fields on focus */
+#signupForm input:focus {
+    outline: none;
+    border-color: #f28043;
+}
+
+/* Style for input fields */
+#yearsForm input,
+input[type="text"] {
+    padding: 8px;
+    background-color: #262626;
+    border: 1px solid #ab261fa4;
+    border-radius: 5px;
+    color: white;
+    width: 55%;
+    height: 10px;
+    /* Make input fields fill the form */
+}
+#yearsForm input:disabled,
+input[type="text"] {
+    padding: 8px;
+    background-color: #292929;
+    border: none;
+    border-radius: 5px;
+    color: grey;
+    width: 55%;
+    height: 10px;
+    /* Make input fields fill the form */
+}
+
+/* Additional styles for input fields on focus */
+#yearsForm input:focus {
+    outline: none;
+    border-color: #f28043;
+}
+
+/* Right section styles */
+.right-section {
+    flex: 1; /* Fill remaining space */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    /* max-height: calc(200vh - 140px); Adjust based on header/footer height */
+    
+    color: white;
+    background-color: #262626;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #ab261fa4;
+    border-bottom: 3px groove #ab261fa4;
+    padding: 10px;
+}
+
+/* matrix grid */
+.schd-matrix {
+    /* width: max-content; Ensure full width of matrix grid */
+    overflow-y: auto;
+    max-height: calc(100vh - 140px); /* Same as right-section to align heights */
+}
+
+/* Shared grid styles */
+.matrix-row {
+    display: grid;
+    grid-template-columns: repeat(121, 40px);
+}
+
+.header-cell,
+.matrix-cell {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+/* header grid */
+/* Styles for header cells */
+.header-cell {
+    border: 1px solid #9c5a5a46;
+    /* Border for each cell */
+    min-height: 30px;
+    /* Minimum height of each cell */
+    width: 40px;
+    /* Set width for each cell */
+    color: rgb(196, 184, 169);
+    /* Set text color */
+}
+
+/* matrix grid */
+/* Styles for matrix cells */
+.matrix-cell {
+    border: 1px solid #8f8f8f46;
+    /* Border for each cell */
+    min-height: 40px;
+    /* Minimum height of each cell */
+    width: 40px;
+    /* Set width for each cell */
+}
+
+
+/* Form Footer Button Styles */
+.form-footer {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space between will align non-submit button to the left and submit button to the right */
+    align-items: center;
+    /* Align items vertically in the center */
+    padding-top: 1em;
+    /* Add space above the footer if needed */
+}
+
+/* Target non-submit buttons */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="file"] {
+    padding: 0.2em 0.5em;
+    background-color: #f28043;
+    /* Orange button background */
+    color: white;
+    border: none;
+    border: none;
+    /* border: 1px solid #ffffff; */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Target non-submit buttons home page mid sections buttons */
+.delBtn {
+    padding: 0.2em 0.5em;
+    background-color: gray;
+    /* Orange button background */
+    color: white;
+    border: none;
+    border: none;
+    /* border: 1px solid #ffffff; */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Target submit buttons specifically for right alignment */
+input[type="submit"],
+button[type="submit"] {
+    padding: 0.2em 1em;
+    background-color: #be1006;
+    /* Red button background */
+    color: white;
+    border: none;
+    /* border: 1px solid #ffffff; */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    /* This pushes the submit button to the right */
+}
+
+/* Optional: different hover effects for buttons */
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    opacity: 0.8;
+    /* Slight transparency on hover */
+}
+
+
+.schd-header,
+.schd-matrix {
+    overflow-x: auto;
+    width: 100%;
+    /* Adjust as needed */
+}
+
+/* Right section styles */
+.right-section {
+    flex: 1; /* Fill remaining space */
+    display: flex; /* Make right-section a flex container */
+    flex-direction: column; /* Stack children vertically */
+    overflow-x: hidden; /* Horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    height: calc(100vh - 140px);
+    /* Specify a fixed width if necessary, e.g., width: 300px; */
+
+}
+
+/* Styles for header grid */
+.schd-header {
+    position: sticky;
+    top: 0;
+    /* Stick to the top of the right-section */
+    z-index: 10;
+    /* Ensure it stays on top during scrolling */
+    background-color: #262626;
+    /* Match the background color to your design */
+    min-height: 140px; /* Example min-height */
+}
+
+
+/* Mid tap styles */
+.mid-tap {
+    position: sticky;
+    left: 0;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* border: 1px solid #ab261fa4; */
+    padding: 5px;
+    padding-left: 0px;
+    flex: 0 0 30px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-left: -7px;
+    /* Spacing between left and right sections */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+}
+
+/* .mid-tap:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly change color on hover */
+/*} */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* This adds space between buttons */
+    align-items: center;
+    /* Center buttons horizontally */
+    padding-top: 75px;
+    /* Top padding */
+}
+
+.vertical-button {
+    margin: 5px 0;
+    /* Spacing between buttons */
+    writing-mode: vertical-lr;
+    /* Make text vertical */
+    transform: rotate(180deg);
+    /* Correct text orientation */
+    padding: 10px 7px;
+    /* Padding inside buttons */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+.vertical-button:hover {
+    opacity: 0.8;
+    /* Slight transparency on hover */
+}
+
+
+/* Mid section styles */
+.mid-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 400px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+}
+
+/* Schedule section styles */
+.schd-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 600px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+    height: 600px;
+    max-height: 100%;
+}
+
+/* Tasks section styles */
+.tasks-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 600px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+    height: 600px;
+    max-height: 100%;
+}
+
+/* classes section styles */
+.classes-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 600px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+    height: 600px;
+    max-height: 100%;
+}
+
+/* semesters section styles */
+.semesters-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 600px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+    height: 600px;
+    max-height: 100%;
+}
+
+/* years section styles */
+.years-section {
+    position: sticky;
+    left: 0;
+    color: white;
+    background-color: #262626;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ab261fa4;
+    /* border-right: none; */
+    border-top: 6px groove #ab261fa4;
+    padding: 10px;
+    flex: 0 0 600px;
+    /* flex-grow, flex-shrink, flex-basis */
+    margin-right: 5px;
+    /* Spacing between left and right sections */
+    transition: margin-left 0.3s ease;
+    /* Smooth slide effect */
+    height: 600px;
+    max-height: 100%;
+}

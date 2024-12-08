@@ -17,12 +17,12 @@ EduTrack is a hybrid cloud-based academic planner designed to enhance time manag
 
 ### Installation
 1. Clone the repository:
-   git clone https://github.com/bilalalissa/EduTrack-v2.git
-2.	Copy the files into your web server directory (e.g., /Applications/XAMPP/xamppfiles/htdocs/EduTrack).
-3.	Start Apache and MySQL services.
-4.	Import the database:
-  •	Go to phpMyAdmin.
-  •	Import sql/EduTrack-DB.sql.
+   git clone `https://github.com/bilalalissa/EduTrack-v2.git`
+2. Copy the files into your web server directory (e.g., /Applications/XAMPP/xamppfiles/htdocs/EduTrack).
+3. Start Apache and MySQL services.
+4. Import the database:
+	- Go to phpMyAdmin.
+	- Import [EduTrack-DB.sql](https://github.com/bilalalissa/EduTrack-v2/blob/main/sql/EduTrack-DB.sql), it will create the database for you.
 
 ### Usage
 	1.	Open the browser and go to http://localhost/EduTrack.
